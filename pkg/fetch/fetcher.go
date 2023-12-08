@@ -46,20 +46,7 @@ func Fetch(path string, file string, username string, password string) {
 }
 
 func fetchRequest(path string, file string, username string, password string) error {
-	// re := regexp.MustCompile(`^(.*/)?(?:$|(.+?)(?:(\.[^.]*$)|$))`)
 	apiUrl := path
-	// parsedURL, err := url.Parse(apiUrl)
-	// if err != nil {
-	// 	fmt.Println(err)
-	// }
-
-	// var filename = ""
-	// if file == "" {
-	// 	fileMatch := re.FindStringSubmatch(parsedURL.Path)
-	// 	filename = fileMatch[2] + fileMatch[3]
-	// } else {
-	// 	filename = file
-	// }
 	filePath := filepath.Base(apiUrl)
 	filenameP, err := os.Create(filePath)
 	if err != nil {
@@ -134,13 +121,6 @@ func fetchRequest(path string, file string, username string, password string) er
 		fmt.Println("error running program:", err)
 		os.Exit(1)
 	}
-
-	// // Writer the body to file
-	// n, err := io.Copy(out, resp.Body)
-	// if err != nil {
-	// 	return err
-	// }
-	// fmt.Printf("Downloaded %d bytes\n", n)
 
 	return nil
 }
