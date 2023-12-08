@@ -12,10 +12,23 @@
       "program": "main.go",
       "env": {},
       "args": [
-        "pull",
+        "fetch",
         "--path",
         "https://gitlab.com/hoppr/droppr/-/releases/v0.4.0-dev.5/downloads/droppr_0.4.0-dev.5_windows_amd64.zip"
       ]
+    },
+    {
+        "name": "Launch SBOM",
+        "type": "go",
+        "request": "launch",
+        "mode": "auto",
+        "program": "main.go",
+        "args": [
+            "validate",
+            "--sbom",
+            // "test/blip.cdx.json"
+            "test/bom.json"
+        ]
     }
   ]
 }
