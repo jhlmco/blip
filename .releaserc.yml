@@ -34,4 +34,14 @@ plugins:
     - generateNotesCmd: |
         echo VERSION=${nextRelease.version} >> $GITHUB_ENV
         echo "::set-output name=version::${nextRelease.version}"
+  
+  - - "@semantic-release/git"
+    - message: |-
+        chore(release): ${nextRelease.version}
+
+        ${nextRelease.notes}
+      assets:
+        - docs/CHANGELOG.md
+        - go.mod
+        - go.sum
 
