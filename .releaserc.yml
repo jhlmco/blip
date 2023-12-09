@@ -9,6 +9,7 @@ branches:
   - name: dev
     channel: dev
     prerelease: true
+tagFormat: ${version}
 plugins:
   - - "@semantic-release/commit-analyzer"
     - preset: conventionalcommits
@@ -31,5 +32,6 @@ plugins:
 
   - - "@semantic-release/exec"
     - generateNotesCmd: |
-        echo VERSION=v${nextRelease.version} >> $GITHUB_ENV
+        echo VERSION=${nextRelease.version} >> $GITHUB_ENV
+        echo "::set-output name=version::${nextRelease.version}"
 
