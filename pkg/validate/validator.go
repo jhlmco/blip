@@ -48,7 +48,7 @@ func Validate(bom string) error {
 	v, _ := semver.NewVersion(sbom.SpecVersion.String())
 
 	if !c.Check(v) {
-		fmt.Printf("SBOM Specification does not meet minimum requirements.  Version is %s, should be >= 1.5\n.", v.Original())
+		fmt.Printf("SBOM %s does not meet minimum requirements.  Version is %s, should be >= 1.5\n.", bom, v.Original())
 	}
 
 	return nil
