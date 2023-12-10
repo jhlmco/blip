@@ -60,8 +60,11 @@ func fetchRequest(path string, file string, username string, password string) er
 	}
 
 	if username != "" && password != "" {
-		var bearer = "Bearer " + password
 		request.SetBasicAuth(username, password)
+	}
+
+	if username == "" && password != "" {
+		var bearer = "Bearer " + password
 		request.Header.Add("Authorization", bearer)
 	}
 
