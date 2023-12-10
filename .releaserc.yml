@@ -32,7 +32,7 @@ plugins:
 
   - - "@semantic-release/exec"
     - generateNotesCmd: |
-        echo VERSION=${nextRelease.version} > release.env
+        echo version=${nextRelease.version} > release.env
         cat release.env >> $GITHUB_STATE
         cat release.env >> $GITHUB_OUTPUT
         echo $GITHUB_OUTPUT
