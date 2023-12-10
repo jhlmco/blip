@@ -3,6 +3,7 @@ package utils
 import (
 	"net"
 	"net/http"
+	"os"
 	"time"
 
 	"golang.org/x/net/http2"
@@ -42,4 +43,23 @@ func NewHTTPClientWithSettings(httpSettings HTTPClientSettings) (*http.Client, e
 		return &client, err
 	}
 	return &client, err
+}
+
+func GetFileContentType(ouput *os.File) (string, error) {
+
+	// to sniff the content type only the first
+	// 512 bytes are used.
+
+	buf := make([]byte, 512)
+
+	_, err := ouput.Read(buf)
+
+	if err != nil {
+		return "", err
+	}
+
+	// the function that actually does the trick
+	contentType := http.DetectContentType(buf)
+
+	return contentType, nil
 }

@@ -124,5 +124,19 @@ func fetchRequest(path string, file string, username string, password string) er
 		os.Exit(1)
 	}
 
+	filenameP, err = os.Open(filenameP.Name())
+
+	if err != nil {
+		panic(err)
+	}
+
+	defer filenameP.Close()
+
+	contentType, err := utils.GetFileContentType(filenameP)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("Content Type of file is: " + contentType)
+
 	return nil
 }
