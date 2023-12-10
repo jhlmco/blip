@@ -46,7 +46,7 @@ jobs:
       - name: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+        run: npx semantic-release && cat release.env >> $GITHUB_STATE && cat release.env >> $GITHUB_OUTPUT
     outputs:
       version: ${{ steps.release.outputs.version }}
 
