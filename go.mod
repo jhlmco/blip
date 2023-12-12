@@ -3,8 +3,10 @@ module github.com/jhlmco/blip
 go 1.21.3
 
 require (
+	github.com/CycloneDX/cyclonedx-go v0.7.2
+	github.com/Masterminds/semver v1.5.0
 	github.com/charmbracelet/bubbles v0.16.1
-	github.com/charmbracelet/bubbletea v0.24.2
+	github.com/charmbracelet/bubbletea v0.25.0
 	github.com/charmbracelet/lipgloss v0.9.1
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/viper v1.18.1
@@ -13,8 +15,6 @@ require (
 )
 
 require (
-	github.com/CycloneDX/cyclonedx-go v0.7.2 // indirect
-	github.com/Masterminds/semver v1.5.0 // indirect
 	github.com/anchore/go-struct-converter v0.0.0-20230627203149-c72ef8859ca9 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
 	github.com/bom-squad/protobom v0.2.0 // indirect
