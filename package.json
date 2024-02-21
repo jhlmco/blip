@@ -23,7 +23,7 @@
         "semantic-release-replace-plugin": "1.2.7"
     },
     "devDependencies": {
-        "lockfile-lint": "4.12.1",
+        "lockfile-lint": "4.13.2",
         "xo": "0.56.0"
     },
     "engines": {
