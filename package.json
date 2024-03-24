@@ -11,13 +11,13 @@
     ],
     "dependencies": {
         "@semantic-release/changelog": "6.0.3",
-        "@semantic-release/commit-analyzer": "^11.0.0",
+        "@semantic-release/commit-analyzer": "^12.0.0",
         "@semantic-release/exec": "6.0.3",
         "@semantic-release/git": "10.0.1",
-        "@semantic-release/npm": "11.0.2",
-        "@semantic-release/release-notes-generator": "12.1.0",
+        "@semantic-release/npm": "12.0.0",
+        "@semantic-release/release-notes-generator": "13.0.0",
         "conventional-changelog-conventionalcommits": "7.0.2",
-        "semantic-release": "22.0.10",
+        "semantic-release": "23.0.6",
         "semantic-release-fail-on-major-bump": "1.0.0",
         "semantic-release-license": "1.0.3",
         "semantic-release-replace-plugin": "1.2.7"
