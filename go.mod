@@ -1,20 +1,20 @@
 module github.com/jhlmco/blip
 
-go 1.21.3
+go 1.25.0
 
 require (
+	github.com/CycloneDX/cyclonedx-go v0.7.2
+	github.com/Masterminds/semver v1.5.0
 	github.com/charmbracelet/bubbles v0.16.1
 	github.com/charmbracelet/bubbletea v0.24.2
 	github.com/charmbracelet/lipgloss v0.9.1
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/viper v1.18.1
 	github.com/xeipuuv/gojsonschema v1.2.0
-	golang.org/x/net v0.19.0
+	golang.org/x/net v0.56.0
 )
 
 require (
-	github.com/CycloneDX/cyclonedx-go v0.7.2 // indirect
-	github.com/Masterminds/semver v1.5.0 // indirect
 	github.com/anchore/go-struct-converter v0.0.0-20230627203149-c72ef8859ca9 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
 	github.com/bom-squad/protobom v0.2.0 // indirect
@@ -51,10 +51,10 @@ require (
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.9.0 // indirect
 	golang.org/x/exp v0.0.0-20230905200255-921286631fa9 // indirect
-	golang.org/x/sync v0.5.0 // indirect
-	golang.org/x/sys v0.15.0 // indirect
-	golang.org/x/term v0.15.0 // indirect
-	golang.org/x/text v0.14.0 // indirect
+	golang.org/x/sync v0.21.0 // indirect
+	golang.org/x/sys v0.46.0 // indirect
+	golang.org/x/term v0.44.0 // indirect
+	golang.org/x/text v0.38.0 // indirect
 	google.golang.org/protobuf v1.31.0 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
